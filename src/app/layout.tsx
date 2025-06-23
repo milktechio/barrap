@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Barrap Landing',
-  description: 'Barrap: una red social que busca conectar a personas y empoderar soluciones para el bien común.',
+  title: 'IKO Landing',
+  description: 'IKO: Putting Your Money in Product Backed Projects.',
 };
 
 export default function RootLayout({
