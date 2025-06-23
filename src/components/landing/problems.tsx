@@ -1,4 +1,15 @@
+"use client";
+
+import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { XCircle, ShieldOff, Coins, Clock, Users, Globe2 } from "lucide-react";
 
 const problems = [
@@ -35,29 +46,64 @@ const problems = [
 ];
 
 export function ProblemsSection() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
+
   return (
-    <section id="problems" className="py-12 sm:py-16 lg:py-20 bg-background">
+    <section id="problems" className="py-12 sm:py-16 lg:py-20 bg-background overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Los Desafíos que Enfrentamos
-          </h2>
-          <p className="mt-4 text-lg text-foreground/80">
-            En un mundo conectado, la verdadera colaboración sigue siendo un reto.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+          <div className="lg:col-span-4">
+            <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+              Los Desafíos que Enfrentamos
+            </h2>
+            <p className="mt-4 text-lg text-foreground/80">
+              En un mundo conectado, la verdadera colaboración sigue siendo un reto.
+            </p>
+            <div className="hidden lg:flex items-center gap-x-4 mt-8">
+              <CarouselPrevious className="bg-card hover:bg-card/80 border-border/50" />
+              <CarouselNext className="bg-card hover:bg-card/80 border-border/50" />
+            </div>
+          </div>
+
+          <div className="lg:col-span-8">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[plugin.current]}
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {problems.map((problem) => (
+                  <CarouselItem key={problem.title} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1 h-full">
+                      <Card className="h-full bg-card/50 border border-border/20 hover:border-primary/50 transition-all duration-300 relative overflow-hidden group backdrop-blur-sm">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                        <CardHeader className="relative z-10 h-full">
+                          <div className="flex items-center gap-4">
+                              {problem.icon}
+                            <CardTitle className="font-headline text-xl text-foreground">{problem.title}</CardTitle>
+                          </div>
+                          <CardDescription className="pt-4 text-base text-foreground/70">{problem.description}</CardDescription>
+                        </CardHeader>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {problems.map((problem) => (
-            <Card key={problem.title} className="bg-card border-border/50 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center gap-4">
-                    {problem.icon}
-                  <CardTitle className="font-headline text-xl text-foreground">{problem.title}</CardTitle>
-                </div>
-                <CardDescription className="pt-4 text-base text-foreground/70">{problem.description}</CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
+
+        <div className="flex lg:hidden items-center justify-center gap-x-4 mt-8">
+          <CarouselPrevious className="bg-card hover:bg-card/80 border-border/50" />
+          <CarouselNext className="bg-card hover:bg-card/80 border-border/50" />
         </div>
       </div>
     </section>
