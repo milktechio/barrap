@@ -9,7 +9,7 @@ const team = [
     role: "CEO & Fundador",
     description: "Doctor en Derecho, Profesor e Investigador Especialista en Derecho y Tecnología, Emprendedor, Papá, Esposo, Cryptobro, Plant 🌱 Fueled.",
     avatar: "LV",
-    image: "https://placehold.co/128x128",
+    image: "https://placehold.co/400x200",
     aiHint: "man professional portrait",
     linkedinUrl: "https://www.linkedin.com/in/mtroluisevazquez/",
   },
@@ -29,7 +29,7 @@ export function TestimonialsSection() {
         </div>
         <div className="mt-12 flex justify-center">
           {team.map((member) => (
-            <Card key={member.name} className="bg-card border-border/50 max-w-lg w-full">
+            <Card key={member.name} className="bg-card border-border/50 max-w-lg w-full rounded-2xl">
               <CardContent className="p-8 flex flex-col sm:flex-row items-center text-center sm:text-left gap-8">
                 <div 
                   className="w-32 h-32 flex-shrink-0" 
