@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { Poppins, PT_Sans } from 'next/font/google';
+import { WalletProvider } from '@/context/wallet-provider';
 
 const siteUrl = 'https://www.barra.mx';
 const siteTitle = 'Barrap: Comunidad, Colaboración y Acción para un Impacto Real';
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'Barrap',
     images: [
       {
-        url: '/images/redsocial.png', // path is relative to the public folder
+        url: '/images/redsocial.png',
         width: 1200,
         height: 630,
         alt: 'Una red de personas conectadas colaborando en la plataforma Barrap',
@@ -84,7 +85,9 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        {children}
+        <WalletProvider>
+          {children}
+        </WalletProvider>
         <Toaster />
       </body>
     </html>

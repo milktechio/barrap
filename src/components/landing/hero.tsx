@@ -11,19 +11,19 @@ export function HeroSection() {
             className="max-w-xl text-center md:text-left animate-fade-in-up" 
             style={{ animationDelay: '0.2s', animationFillMode: 'backwards' }}
           >
-            <h1 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+            <h1 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl">
               Donde la Comunidad se Une para la Acción
             </h1>
             <p className="mt-6 text-base leading-8 text-foreground/80 sm:text-lg">
               Barrap es una red social que te conecta con personas y recursos para superar desafíos comunes. Juntos, transformamos la colaboración en un impacto real y medible.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 md:justify-start">
-              <Button size="lg" className="rounded-full font-bold shadow-lg shadow-primary/20 transition-transform hover:scale-105 w-full sm:w-auto" asChild>
+              <Button size="lg" className="rounded-full font-bold shadow-lg shadow-primary/20 transition-transform hover:scale-105 w-full sm:w-auto text-xs sm:text-sm" asChild>
                 <a href="https://hub.barra.mx" target="_blank" rel="noopener noreferrer">
                   Únete a la Comunidad <ChevronRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full bg-transparent font-bold transition-transform hover:scale-105 hover:bg-primary/10 w-full sm:w-auto" asChild>
+              <Button size="lg" variant="outline" className="rounded-full bg-transparent font-bold transition-transform hover:scale-105 hover:bg-primary/10 w-full sm:w-auto text-xs sm:text-sm" asChild>
                 <a href="#products">
                   Explora Iniciativas <ChevronRight className="ml-2 h-5 w-5" />
                 </a>
