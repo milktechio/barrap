@@ -9,9 +9,10 @@ export function Footer() {
           <div className="flex-shrink-0">
             <img src="/images/logo_texto.png" alt="Barrap logo" className="h-10 w-auto" />
           </div>
-          <p className="text-center text-sm text-foreground/60">
-            &copy; {new Date().getFullYear()} Barrap. Todos los derechos reservados.
-          </p>
+          <div className="flex flex-col items-center gap-2 text-center text-sm text-foreground/60">
+            <p>&copy; {new Date().getFullYear()} Barrap. Todos los derechos reservados.</p>
+            <p>Hecho con 🩷 por milktech.io</p>
+          </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" size="icon" asChild>
               <a href="https://www.facebook.com/share/16aEithGqv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
