@@ -1,0 +1,23 @@
+{
+  "name": "Barrap",
+  "short_name": "Barrap",
+  "description": "Donde la Comunidad se Une para la Acción.",
+  "icons": [
+    {
+      "src": "/images/b_fondo_relleno.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/b_fondo_relleno.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#8619fe",
+  "background_color": "#020817",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

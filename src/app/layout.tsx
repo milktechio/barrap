@@ -6,6 +6,7 @@ import { Poppins, PT_Sans } from 'next/font/google';
 export const metadata: Metadata = {
   title: 'Barrap Landing',
   description: 'Barrap: Donde la Comunidad se Une para la Acción.',
+  manifest: '/manifest.json',
 };
 
 const poppins = Poppins({
