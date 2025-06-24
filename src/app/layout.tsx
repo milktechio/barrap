@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'Barrap',
     images: [
       {
-        url: '/images/redsocial.png',
+        url: '/images/redsocial.webp',
         width: 1200,
         height: 630,
         alt: 'Una red de personas conectadas colaborando en la plataforma Barrap',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteTitle,
     description: siteDescription,
-    images: [`${siteUrl}/images/redsocial.png`],
+    images: [`${siteUrl}/images/redsocial.webp`],
     creator: '@Barra_App',
   },
   robots: {
@@ -71,7 +71,7 @@ const organizationSchema = {
   "@type": "Organization",
   "name": "Barrap",
   "url": siteUrl,
-  "logo": `${siteUrl}/images/logo_texto.png`,
+  "logo": `${siteUrl}/images/logo_texto.webp`,
   "sameAs": [
     "https://www.facebook.com/share/16aEithGqv/?mibextid=wwXIfr",
     "https://www.instagram.com/barra.app",

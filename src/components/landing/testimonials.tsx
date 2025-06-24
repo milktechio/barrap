@@ -9,7 +9,7 @@ const team = [
     role: "CEO & Fundador",
     description: "Doctor en Derecho, Profesor e Investigador Especialista en Derecho y Tecnología, Emprendedor, Papá, Esposo, Cryptobro, Plant 🌱 Fueled.",
     avatar: "LV",
-    image: "/images/luis.jpeg",
+    image: "/images/luis.webp",
     linkedinUrl: "https://www.linkedin.com/in/mtroluisevazquez/",
   },
 ];

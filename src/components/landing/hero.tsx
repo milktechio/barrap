@@ -32,7 +32,7 @@ export function HeroSection() {
           </div>
           <div className="flex justify-center animate-float">
             <Image
-              src="/images/b_fondo_relleno.png"
+              src="/images/b_fondo_relleno.webp"
               alt="Ilustración de una red de personas conectadas"
               width={550}
               height={550}

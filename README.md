@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://www.barra.mx">
-    <img src="public/images/logo_texto.png" alt="Logo" width="237" height="60">
+    <img src="public/images/logo_texto.webp" alt="Logo" width="237" height="60">
   </a>
 
   <h3 align="center">Barrap Landing</h3>
@@ -127,7 +127,7 @@ Project Link: [https://github.com/milktechio/barrap/](https://github.com/milktec
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: public/images/redsocial.png
+[product-screenshot]: public/images/redsocial.webp
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB

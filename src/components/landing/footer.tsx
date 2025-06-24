@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-shrink-0">
-            <Image src="/images/logo_texto.png" alt="Barrap logo" width={158} height={40} />
+            <Image src="/images/logo_texto.webp" alt="Barrap logo" width={158} height={40} />
           </div>
           <div className="flex flex-col items-center gap-2 text-center text-sm text-foreground/60">
             <p>&copy; {new Date().getFullYear()} Barrap. Todos los derechos reservados.</p>

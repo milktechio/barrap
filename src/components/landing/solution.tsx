@@ -41,7 +41,7 @@ export function SolutionSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 group">
             <Image
-              src="/images/redsocial.png"
+              src="/images/redsocial.webp"
               alt="Comunidad de Barrap colaborando"
               fill
               className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500 ease-in-out"

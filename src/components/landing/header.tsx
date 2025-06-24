@@ -14,7 +14,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 max-w-7xl items-center justify-between">
-        <Image src="/images/logo_texto.png" alt="Barrap logo" width={158} height={40} className="h-10 w-auto" />
+        <Image src="/images/logo_texto.webp" alt="Barrap logo" width={158} height={40} className="h-10 w-auto" />
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map((link) => (
             <a
