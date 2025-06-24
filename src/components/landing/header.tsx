@@ -1,5 +1,5 @@
 import { BarrapLogo } from "@/components/icons";
-import { Button } from "@/components/ui/button";
+import { ConnectWalletButton } from "@/components/landing/connect-wallet-button";
 
 const navLinks = [
   { title: "INICIO", href: "#hero" },
@@ -29,9 +29,7 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <Button variant="outline" className="rounded-full !px-6 !py-3 font-bold">
-          LOGIN
-        </Button>
+        <ConnectWalletButton />
       </div>
     </header>
   );
