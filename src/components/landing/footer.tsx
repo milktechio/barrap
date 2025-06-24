@@ -11,7 +11,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col items-center gap-2 text-center text-sm text-foreground/60">
             <p>&copy; {new Date().getFullYear()} Barrap. Todos los derechos reservados.</p>
-            <p>Hecho con 🩷 por milktech.io</p>
+            <p>Hecho con 🩷 por <a href="https://milktech.io" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">milktech.io</a></p>
           </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" size="icon" asChild>
