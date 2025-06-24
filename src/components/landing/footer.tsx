@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Facebook, Github, Instagram } from "lucide-react";
+import { Facebook, Github, Instagram, X } from "lucide-react";
 import Image from "next/image";
 
 export function Footer() {
@@ -23,6 +23,11 @@ export function Footer() {
             <Button variant="ghost" size="icon" asChild>
               <a href="https://www.instagram.com/barra.app" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram className="h-5 w-5 text-foreground/70 hover:text-primary" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a href="https://twitter.com/Barra_App" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
+                <X className="h-5 w-5 text-foreground/70 hover:text-primary" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
