@@ -9,8 +9,7 @@ const team = [
     role: "CEO & Fundador",
     description: "Doctor en Derecho, Profesor e Investigador Especialista en Derecho y Tecnología, Emprendedor, Papá, Esposo, Cryptobro, Plant 🌱 Fueled.",
     avatar: "LV",
-    image: "https://placehold.co/400x200",
-    aiHint: "man professional portrait",
+    image: "/images/luis.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/mtroluisevazquez/",
   },
 ];
@@ -36,7 +35,7 @@ export function TestimonialsSection() {
                   style={{ clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)' }}
                 >
                   <Avatar className="w-full h-full rounded-none">
-                    <AvatarImage src={member.image} alt={member.name} data-ai-hint={member.aiHint} className="object-cover" />
+                    <AvatarImage src={member.image} alt={member.name} className="object-cover" />
                     <AvatarFallback>{member.avatar}</AvatarFallback>
                   </Avatar>
                 </div>
