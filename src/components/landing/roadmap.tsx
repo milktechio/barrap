@@ -1,55 +1,110 @@
-import { Rocket, Scaling, Wand2, Handshake } from "lucide-react";
+import { Rocket, Scaling, Wand2, Handshake, Users, GitBranch, CheckCircle2, CircleDot } from "lucide-react";
 
-const roadmapItems = [
+const doneItems = [
   {
-    icon: <Rocket className="h-6 w-6 text-accent" />,
+    icon: Users,
+    title: "200+ Primeros Usuarios",
+    description: "Recopilando información valiosa en nuestra fase beta.",
+  },
+  {
+    icon: GitBranch,
+    title: "1 Iniciativa Desplegada",
+    description: "Comenzando con nuestra primera iniciativa segmentada con éxito.",
+  },
+];
+
+const pendingItems = [
+  {
+    icon: Handshake,
+    title: "Socios Estratégicos",
+    description: "Cerrando colaboraciones para acceso a más recursos y grupos.",
+  },
+  {
+    icon: Rocket,
     title: "Lanzamiento Completo",
-    description: "Despliegue de nuestras 4 iniciativas segmentadas para ofrecer una experiencia completa a todos los usuarios.",
+    description: "Despliegue de nuestras 4 iniciativas segmentadas para una experiencia completa.",
   },
   {
-    icon: <Scaling className="h-6 w-6 text-accent" />,
+    icon: Scaling,
     title: "Crecimiento y Expansión",
-    description: "Aumento de la base de usuarios y expansión geográfica con un enfoque en objetivos específicos y comunidades clave.",
+    description: "Aumento de la base de usuarios y expansión geográfica.",
   },
   {
-    icon: <Wand2 className="h-6 w-6 text-accent" />,
+    icon: Wand2,
     title: "Mejora de Características",
-    description: "Mejora continua de la experiencia del usuario en la aplicación, escuchando el feedback de la comunidad.",
-  },
-  {
-    icon: <Handshake className="h-6 w-6 text-accent" />,
-    title: "Iniciativas de Impacto Social",
-    description: "Asociación con al menos 5 organizaciones sin fines de lucro y ONGs para amplificar nuestro impacto positivo.",
+    description: "Mejora continua de la app escuchando a la comunidad.",
   },
 ];
 
 export function RoadmapSection() {
   return (
-    <section id="roadmap" className="py-12 sm:py-16 lg:py-20 bg-card">
+    <section id="roadmap" className="py-20 sm:py-24 bg-card/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Nuestra Hoja de Ruta
+            Nuestro Progreso y Hoja de Ruta
           </h2>
           <p className="mt-4 text-lg text-foreground/80">
-            Nuestros planes para el futuro y la expansión de la red Barrap.
+            Un vistazo a lo que hemos logrado y hacia dónde nos dirigimos.
           </p>
         </div>
-        <div className="mt-16 flow-root">
-          <div className="-m-4 flex flex-wrap justify-center">
-            {roadmapItems.map((item, index) => (
-              <div key={item.title} className="p-4 w-full md:w-1/2 lg:w-1/4">
-                <div className="relative">
-                  <div className="relative flex flex-col items-center text-center p-6 bg-background rounded-lg border border-border/50">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 mb-4">
-                      {item.icon}
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground font-headline">{item.title}</h3>
-                    <p className="mt-2 text-foreground/70">{item.description}</p>
-                  </div>
+
+        <div className="relative mt-20">
+          <div className="absolute left-1/2 top-4 hidden h-full w-px -translate-x-1/2 bg-border/50 lg:block" aria-hidden="true"></div>
+
+          <div className="grid grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-16">
+            
+            <div className="flex flex-col items-center lg:items-end gap-y-12">
+                <div className="text-center lg:text-right lg:pr-8">
+                    <h3 className="font-headline text-2xl font-bold text-foreground">Logrado</h3>
                 </div>
-              </div>
-            ))}
+                <div className="w-full max-w-md space-y-8">
+                {doneItems.map((item, index) => (
+                    <div key={index} className="relative">
+                        <div className="absolute -right-4 top-1/2 hidden h-8 w-8 -translate-y-1/2 translate-x-1/2 lg:flex items-center justify-center">
+                             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
+                                <CheckCircle2 className="h-5 w-5 text-primary-foreground" />
+                            </div>
+                        </div>
+                        <div className="p-6 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm">
+                            <div className="flex items-center gap-4">
+                                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+                                <item.icon className="h-6 w-6 text-primary" />
+                                </div>
+                                <h4 className="text-lg font-semibold text-foreground font-headline">{item.title}</h4>
+                            </div>
+                            <p className="mt-2 text-foreground/70">{item.description}</p>
+                        </div>
+                    </div>
+                ))}
+                </div>
+            </div>
+
+            <div className="flex flex-col items-center lg:items-start gap-y-12">
+                <div className="text-center lg:text-left lg:pl-8">
+                    <h3 className="font-headline text-2xl font-bold text-foreground">Pendiente</h3>
+                </div>
+                <div className="w-full max-w-md space-y-8">
+                {pendingItems.map((item, index) => (
+                    <div key={index} className="relative">
+                         <div className="absolute -left-4 top-1/2 hidden h-8 w-8 -translate-y-1/2 -translate-x-1/2 lg:flex items-center justify-center">
+                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/50 border-2 border-accent">
+                                <CircleDot className="h-5 w-5 text-accent" />
+                            </div>
+                        </div>
+                         <div className="p-6 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm">
+                            <div className="flex items-center gap-4">
+                                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent/10">
+                                    <item.icon className="h-6 w-6 text-accent" />
+                                </div>
+                                <h4 className="text-lg font-semibold text-foreground font-headline">{item.title}</h4>
+                            </div>
+                            <p className="mt-2 text-foreground/70">{item.description}</p>
+                        </div>
+                    </div>
+                ))}
+                </div>
+            </div>
           </div>
         </div>
       </div>
