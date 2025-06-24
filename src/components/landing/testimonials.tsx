@@ -19,10 +19,10 @@ export function TestimonialsSection() {
     <section id="team" className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          <h2 className="font-headline text-2xl font-bold tracking-tight text-primary sm:text-3xl">
             Nuestro Equipo
           </h2>
-          <p className="mt-4 text-lg text-foreground/80">
+          <p className="mt-4 text-base text-foreground/80 sm:text-lg">
             Conoce a la mente detrás de Barrap.
           </p>
         </div>
@@ -37,14 +37,16 @@ export function TestimonialsSection() {
                   <Image
                     src={member.image}
                     alt={member.name}
-                    fill
-                    className="object-cover"
+                    width={128}
+                    height={192}
+                    className="object-cover w-full h-full"
+                    sizes="128px"
                   />
                 </div>
                 <div className="flex-grow">
-                  <div className="font-bold text-2xl text-foreground">{member.name}</div>
+                  <div className="font-bold text-xl text-foreground">{member.name}</div>
                   <div className="font-semibold text-primary">{member.role}</div>
-                  <p className="mt-4 text-sm text-foreground/70">
+                  <p className="mt-4 text-xs text-foreground/70 sm:text-sm">
                     {member.description}
                   </p>
                   <div className="mt-4 flex justify-center sm:justify-start">

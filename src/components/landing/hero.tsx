@@ -11,10 +11,10 @@ export function HeroSection() {
             className="max-w-xl text-center md:text-left animate-fade-in-up" 
             style={{ animationDelay: '0.2s', animationFillMode: 'backwards' }}
           >
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
               Donde la Comunidad se Une para la Acción
             </h1>
-            <p className="mt-6 text-lg leading-8 text-foreground/80">
+            <p className="mt-6 text-base leading-8 text-foreground/80 sm:text-lg">
               Barrap es una red social que te conecta con personas y recursos para superar desafíos comunes. Juntos, transformamos la colaboración en un impacto real y medible.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-4 md:justify-start">
@@ -32,7 +32,7 @@ export function HeroSection() {
               alt="Ilustración de una red de personas conectadas"
               width={550}
               height={550}
-              className="w-full max-w-md lg:max-w-lg"
+              className="w-full max-w-xs sm:max-w-md lg:max-w-lg"
               priority
             />
           </div>

@@ -52,10 +52,10 @@ export function RoadmapSection() {
     <section id="roadmap" className="py-20 sm:py-24 bg-card/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          <h2 className="font-headline text-2xl font-bold tracking-tight text-primary sm:text-3xl">
             Nuestro Progreso y Hoja de Ruta
           </h2>
-          <p className="mt-4 text-lg text-foreground/80">
+          <p className="mt-4 text-base text-foreground/80 sm:text-lg">
             Un vistazo a lo que hemos logrado y hacia dónde nos dirigimos.
           </p>
         </div>
@@ -67,7 +67,7 @@ export function RoadmapSection() {
             
             <div className="flex flex-col items-center lg:items-end gap-y-12">
                 <div className="text-center lg:text-right lg:pr-8">
-                    <h3 className="font-headline text-2xl font-bold text-foreground">Logrado</h3>
+                    <h3 className="font-headline text-xl font-bold text-foreground">Logrado</h3>
                 </div>
                 <div className="w-full max-w-md space-y-8">
                 {doneItems.map((item, index) => (
@@ -82,9 +82,9 @@ export function RoadmapSection() {
                                 <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
                                 <item.icon className="h-6 w-6 text-primary" />
                                 </div>
-                                <h4 className="text-lg font-semibold text-foreground font-headline">{item.title}</h4>
+                                <h4 className="text-base font-semibold text-foreground font-headline">{item.title}</h4>
                             </div>
-                            <p className="mt-2 text-foreground/70">{item.description}</p>
+                            <p className="mt-2 text-sm text-foreground/70">{item.description}</p>
                         </div>
                     </div>
                 ))}
@@ -93,7 +93,7 @@ export function RoadmapSection() {
 
             <div className="flex flex-col items-center lg:items-start gap-y-12">
                 <div className="text-center lg:text-left lg:pl-8">
-                    <h3 className="font-headline text-2xl font-bold text-foreground">Pendiente</h3>
+                    <h3 className="font-headline text-xl font-bold text-foreground">Pendiente</h3>
                 </div>
                 <div className="w-full max-w-md space-y-8">
                 {pendingItems.map((item, index) => (
@@ -108,9 +108,9 @@ export function RoadmapSection() {
                                 <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent/10">
                                     <item.icon className="h-6 w-6 text-accent" />
                                 </div>
-                                <h4 className="text-lg font-semibold text-foreground font-headline">{item.title}</h4>
+                                <h4 className="text-base font-semibold text-foreground font-headline">{item.title}</h4>
                             </div>
-                            <p className="mt-2 text-foreground/70">{item.description}</p>
+                            <p className="mt-2 text-sm text-foreground/70">{item.description}</p>
                         </div>
                     </div>
                 ))}

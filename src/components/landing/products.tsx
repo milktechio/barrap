@@ -44,10 +44,10 @@ export function ProductsSection() {
     <section id="products" className="py-20 sm:py-24 bg-transparent">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          <h2 className="font-headline text-2xl font-bold tracking-tight text-primary sm:text-3xl">
             Productos y Oportunidades
           </h2>
-          <p className="mt-4 text-lg text-foreground/80">
+          <p className="mt-4 text-base text-foreground/80 sm:text-lg">
             Herramientas simplificadas para ganar, ahorrar y mejorar tu vida en el ecosistema cripto.
           </p>
         </div>
@@ -61,7 +61,7 @@ export function ProductsSection() {
               <div className="absolute -left-[9px] top-8 h-4 w-4 rounded-full bg-background border-2 border-border/20 group-hover:border-primary transition-all duration-300"></div>
 
               <div className="pl-8 pb-12">
-                <h3 className="text-2xl font-headline font-bold pt-6 text-foreground/80 group-hover:text-primary transition-colors duration-300 cursor-pointer">
+                <h3 className="text-xl font-headline font-bold pt-6 text-foreground/80 group-hover:text-primary transition-colors duration-300 cursor-pointer">
                   {product.title}
                 </h3>
                 <div className="mt-4 max-h-0 opacity-0 group-hover:max-h-96 group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
@@ -69,7 +69,7 @@ export function ProductsSection() {
                     <div className={`flex-shrink-0 mt-1 ${product.color}`}>
                       {product.icon}
                     </div>
-                    <p className="text-foreground/70 text-base">{product.description}</p>
+                    <p className="text-foreground/70 text-sm">{product.description}</p>
                   </div>
                 </div>
               </div>

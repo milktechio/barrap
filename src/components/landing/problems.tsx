@@ -65,10 +65,10 @@ export function ProblemsSection() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-8 items-center">
             <div className="lg:col-span-4">
-              <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+              <h2 className="font-headline text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
                 Los Desafíos que Enfrentamos
               </h2>
-              <p className="mt-6 text-lg text-foreground/80">
+              <p className="mt-6 text-base text-foreground/80 sm:text-lg">
                 En un mundo conectado, la verdadera colaboración sigue siendo un reto.
               </p>
             </div>
@@ -82,9 +82,9 @@ export function ProblemsSection() {
                         <CardHeader className="relative z-10 h-full">
                           <div className="flex items-center gap-4">
                               {problem.icon}
-                            <CardTitle className="font-headline text-xl text-foreground">{problem.title}</CardTitle>
+                            <CardTitle className="font-headline text-lg text-foreground">{problem.title}</CardTitle>
                           </div>
-                          <CardDescription className="pt-4 text-base text-foreground/70">{problem.description}</CardDescription>
+                          <CardDescription className="pt-4 text-sm text-foreground/70">{problem.description}</CardDescription>
                         </CardHeader>
                       </Card>
                     </div>

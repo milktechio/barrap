@@ -30,34 +30,34 @@ export function SolutionSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center mb-16">
           <p className="text-base font-semibold leading-7 text-primary font-headline">La Solución de Barrap</p>
-          <h2 className="mt-2 font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="mt-2 font-headline text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
             Una Red Social para la Acción
           </h2>
-          <p className="mt-6 text-lg leading-8 text-foreground/80">
+          <p className="mt-6 text-base leading-8 text-foreground/80 sm:text-lg">
             Nuestra propuesta de valor es simple: liderazgo colectivo para conexiones significativas y un impacto real.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-20">
-          <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 group">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="relative aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 group">
             <Image
               src="/images/redsocial.png"
               alt="Comunidad de Barrap colaborando"
-              width={800}
-              height={800}
+              fill
               className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
+              sizes="(max-width: 1023px) 100vw, 50vw"
             />
           </div>
             
-          <div className="space-y-10">
+          <div className="space-y-6 md:space-y-10">
             {solutions.map((solution) => (
               <div key={solution.title} className="flex items-start gap-6">
                 <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-card border border-border/20">
                   {solution.icon}
                 </div>
                 <div>
-                  <h3 className="font-headline text-xl font-semibold text-foreground">{solution.title}</h3>
-                  <p className="mt-1 text-foreground/70">{solution.description}</p>
+                  <h3 className="font-headline text-lg font-semibold text-foreground">{solution.title}</h3>
+                  <p className="mt-1 text-sm text-foreground/70">{solution.description}</p>
                 </div>
               </div>
             ))}
