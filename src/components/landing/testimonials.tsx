@@ -29,23 +29,26 @@ export function TestimonialsSection() {
         </div>
         <div className="mt-12 flex justify-center">
           {team.map((member) => (
-            <Card key={member.name} className="bg-card border-border/50 max-w-sm w-full">
-              <CardContent className="pt-6 flex flex-col items-center text-center">
-                <Avatar className="w-32 h-32 mb-4">
+            <Card key={member.name} className="bg-card border-border/50 max-w-lg w-full">
+              <CardContent className="p-8 flex flex-col sm:flex-row items-center text-center sm:text-left gap-8">
+                <Avatar className="w-32 h-32 flex-shrink-0">
                   <AvatarImage src={member.image} alt={member.name} data-ai-hint={member.aiHint} />
                   <AvatarFallback>{member.avatar}</AvatarFallback>
                 </Avatar>
-                <div className="font-bold text-xl text-foreground">{member.name}</div>
-                <div className="font-semibold text-primary">{member.role}</div>
-                <p className="mt-4 text-foreground/70">
-                  {member.description}
-                </p>
-                <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                  <Button variant="outline" className="mt-4 rounded-full border-primary text-primary hover:bg-primary/10 hover:text-primary">
-                    <Linkedin className="mr-2 h-4 w-4" />
-                    LinkedIn
-                  </Button>
-                </a>
+                <div className="flex-grow">
+                  <div className="font-bold text-2xl text-foreground">{member.name}</div>
+                  <div className="font-semibold text-primary">{member.role}</div>
+                  <p className="mt-4 text-sm text-foreground/70">
+                    {member.description}
+                  </p>
+                  <div className="mt-4 flex justify-center sm:justify-start">
+                    <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                      <Button variant="outline" size="icon" className="rounded-full">
+                        <Linkedin className="h-4 w-4" />
+                      </Button>
+                    </a>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           ))}
