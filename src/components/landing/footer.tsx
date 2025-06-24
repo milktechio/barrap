@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-shrink-0">
-            <Image src="/images/logo_texto.png" alt="Barrap logo" width={158} height={40} className="h-10 w-auto" />
+            <Image src="/images/logo_texto.png" alt="Barrap logo" width={158} height={40} />
           </div>
           <div className="flex flex-col items-center gap-2 text-center text-sm text-foreground/60">
             <p>&copy; {new Date().getFullYear()} Barrap. Todos los derechos reservados.</p>
@@ -26,7 +26,7 @@ export function Footer() {
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com/your_username/your_repository" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/milktechio/barrap/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-5 w-5 text-foreground/70 hover:text-primary" />
               </a>
             </Button>

@@ -80,7 +80,7 @@ Make sure you have npm installed.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username/your_repository.git
+   git clone https://github.com/milktechio/barrap.git
    ```
 2. Install NPM packages
    ```sh
@@ -122,7 +122,7 @@ Creadores:
 * **milktechio**
 * **alfredocendejas**
 
-Project Link: [https://github.com/your_username/your_repository](https://github.com/your_username/your_repository)
+Project Link: [https://github.com/milktechio/barrap/](https://github.com/milktechio/barrap/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,4 +140,3 @@ Project Link: [https://github.com/your_username/your_repository](https://github.
 [Genkit-url]: https://firebase.google.com/docs/genkit
 [Solana-shield]: https://img.shields.io/badge/Solana-9945FF?style=for-the-badge&logo=solana&logoColor=white
 [Solana-url]: https://solana.com/
-    
