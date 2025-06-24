@@ -69,7 +69,7 @@ export function ProblemsSection() {
                 Los Desafíos que Enfrentamos
               </h2>
               <p className="mt-6 text-base text-foreground/80 sm:text-lg">
-                En un mundo conectado, la verdadera colaboración sigue siendo un reto.
+                En un mundo conectado, la verdadera colaboración sigue siendo un reto. Descubre cómo <a href="#solution" className="text-primary hover:underline">nuestra solución</a> aborda estos puntos.
               </p>
             </div>
             <div className="lg:col-span-8">
