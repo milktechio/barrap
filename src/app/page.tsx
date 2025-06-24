@@ -1,12 +1,14 @@
 import { Header } from "@/components/landing/header";
 import { HeroSection } from "@/components/landing/hero";
-import { ProblemsSection } from "@/components/landing/problems";
-import { SolutionSection } from "@/components/landing/solution";
-import { ProductsSection } from "@/components/landing/products";
-import { TestimonialsSection } from "@/components/landing/testimonials";
-import { RoadmapSection } from "@/components/landing/roadmap";
 import { Footer } from "@/components/landing/footer";
-import { SwapSection } from "@/components/landing/swap-section";
+import dynamic from 'next/dynamic';
+
+const ProblemsSection = dynamic(() => import('@/components/landing/problems').then(mod => mod.ProblemsSection));
+const SolutionSection = dynamic(() => import('@/components/landing/solution').then(mod => mod.SolutionSection));
+const ProductsSection = dynamic(() => import('@/components/landing/products').then(mod => mod.ProductsSection));
+const TestimonialsSection = dynamic(() => import('@/components/landing/testimonials').then(mod => mod.TestimonialsSection));
+const RoadmapSection = dynamic(() => import('@/components/landing/roadmap').then(mod => mod.RoadmapSection));
+const SwapSection = dynamic(() => import('@/components/landing/swap-section').then(mod => mod.SwapSection));
 
 export default function Home() {
   return (
