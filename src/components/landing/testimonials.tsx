@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const team = [
   {
@@ -31,13 +31,15 @@ export function TestimonialsSection() {
             <Card key={member.name} className="bg-card border-border/50 max-w-lg w-full rounded-2xl">
               <CardContent className="p-8 flex flex-col sm:flex-row items-center text-center sm:text-left gap-8">
                 <div 
-                  className="w-32 h-48 flex-shrink-0" 
+                  className="w-32 h-48 flex-shrink-0 relative" 
                   style={{ clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)' }}
                 >
-                  <Avatar className="w-full h-full rounded-none">
-                    <AvatarImage src={member.image} alt={member.name} className="object-cover" />
-                    <AvatarFallback>{member.avatar}</AvatarFallback>
-                  </Avatar>
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="flex-grow">
                   <div className="font-bold text-2xl text-foreground">{member.name}</div>

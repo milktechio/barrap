@@ -1,11 +1,26 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { Poppins, PT_Sans } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: 'Barrap Landing',
   description: 'Barrap: Donde la Comunidad se Une para la Acción.',
 };
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+  weight: ['400', '600', '700']
+});
+
+const ptSans = PT_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-pt-sans',
+  weight: ['400', '700']
+});
 
 export default function RootLayout({
   children,
@@ -13,12 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="es" className={`${poppins.variable} ${ptSans.variable}`}>
+      <head />
       <body className="font-body antialiased">
         {children}
         <Toaster />
