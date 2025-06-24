@@ -28,11 +28,10 @@ export function HeroSection() {
           </div>
           <div className="flex justify-center animate-float">
             <Image
-              src="https://placehold.co/600x600.png"
+              src="/images/b_fondo_relleno.png"
               alt="Ilustración de una red de personas conectadas"
               width={550}
               height={550}
-              data-ai-hint="community collaboration"
               className="w-full max-w-md lg:max-w-lg"
               priority
             />
