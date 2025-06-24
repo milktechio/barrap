@@ -32,8 +32,8 @@ export function TestimonialsSection() {
             <Card key={member.name} className="bg-card border-border/50 max-w-lg w-full rounded-2xl">
               <CardContent className="p-8 flex flex-col sm:flex-row items-center text-center sm:text-left gap-8">
                 <div 
-                  className="w-32 h-32 flex-shrink-0" 
-                  style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+                  className="w-32 h-48 flex-shrink-0" 
+                  style={{ clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)' }}
                 >
                   <Avatar className="w-full h-full rounded-none">
                     <AvatarImage src={member.image} alt={member.name} data-ai-hint={member.aiHint} className="object-cover" />
