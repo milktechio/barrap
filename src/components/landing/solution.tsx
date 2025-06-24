@@ -41,12 +41,11 @@ export function SolutionSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-20">
           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 group">
             <Image
-              src="https://placehold.co/800x800.png"
+              src="/images/redsocial.png"
               alt="Comunidad de Barrap colaborando"
               width={800}
               height={800}
               className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
-              data-ai-hint="abstract network"
             />
           </div>
             
