@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'IKO Landing',
-  description: 'IKO: Putting Your Money in Product Backed Projects.',
+  title: 'Barrap Landing',
+  description: 'Barrap: Donde la Comunidad se Une para la Acción.',
 };
 
 export default function RootLayout({

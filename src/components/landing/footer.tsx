@@ -1,4 +1,4 @@
-import { IkoLogo } from "@/components/icons";
+import { BarrapLogo } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { Twitter, Instagram, Linkedin } from "lucide-react";
 
@@ -8,10 +8,10 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-shrink-0">
-            <IkoLogo />
+            <BarrapLogo />
           </div>
           <p className="text-center text-sm text-foreground/60">
-            &copy; {new Date().getFullYear()} IKO. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} Barrap. Todos los derechos reservados.
           </p>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" size="icon" asChild>

@@ -1,20 +1,20 @@
-import { IkoLogo } from "@/components/icons";
+import { BarrapLogo } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { title: "HOME", href: "#hero" },
-  { title: "FEATURE", href: "#products" },
+  { title: "INICIO", href: "#hero" },
+  { title: "DESAFÍOS", href: "#problems" },
+  { title: "PRODUCTOS", href: "#products" },
   { title: "ROADMAP", href: "#roadmap" },
-  { title: "BLOG", href: "#" },
-  { title: "CONTACT", href: "#footer" },
+  { title: "CONTACTO", href: "#footer" },
 ];
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 max-w-7xl items-center justify-between">
-        <IkoLogo />
-        <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <BarrapLogo />
+        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map((link, index) => (
             <a
               key={link.title}
