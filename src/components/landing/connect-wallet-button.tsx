@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { PhantomIcon } from "@/components/icons";
+import { SolanaLogo } from "@/components/icons";
 import { useToast } from "@/hooks/use-toast";
 
 type PhantomProvider = {
@@ -114,7 +114,7 @@ export function ConnectWalletButton() {
         className="rounded-full !px-4 !py-3 font-bold border-primary text-primary"
         aria-label="Desconectar Wallet"
       >
-        <PhantomIcon className="w-5 h-5 mr-2" />
+        <SolanaLogo className="w-5 h-5 mr-2" />
         {truncatedKey}
       </Button>
     );
@@ -125,9 +125,9 @@ export function ConnectWalletButton() {
       onClick={handleConnect} 
       variant="default" 
       className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold shadow-lg shadow-accent/20 transition-all duration-300 ease-in-out transform hover:scale-105 rounded-full !px-6 !py-3 gradient-button"
-      aria-label="Conectar con Phantom Wallet"
+      aria-label="Conectar Wallet"
     >
-      <PhantomIcon className="w-5 h-5 mr-2" />
+      <SolanaLogo className="w-5 h-5 mr-2" />
       Conectar Wallet
     </Button>
   );
