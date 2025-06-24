@@ -31,10 +31,15 @@ export function TestimonialsSection() {
           {team.map((member) => (
             <Card key={member.name} className="bg-card border-border/50 max-w-lg w-full">
               <CardContent className="p-8 flex flex-col sm:flex-row items-center text-center sm:text-left gap-8">
-                <Avatar className="w-32 h-32 flex-shrink-0">
-                  <AvatarImage src={member.image} alt={member.name} data-ai-hint={member.aiHint} />
-                  <AvatarFallback>{member.avatar}</AvatarFallback>
-                </Avatar>
+                <div 
+                  className="w-32 h-32 flex-shrink-0" 
+                  style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+                >
+                  <Avatar className="w-full h-full rounded-none">
+                    <AvatarImage src={member.image} alt={member.name} data-ai-hint={member.aiHint} className="object-cover" />
+                    <AvatarFallback>{member.avatar}</AvatarFallback>
+                  </Avatar>
+                </div>
                 <div className="flex-grow">
                   <div className="font-bold text-2xl text-foreground">{member.name}</div>
                   <div className="font-semibold text-primary">{member.role}</div>
