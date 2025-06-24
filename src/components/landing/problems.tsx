@@ -51,33 +51,28 @@ export function ProblemsSection() {
   );
 
   return (
-    <section id="problems" className="py-12 sm:py-16 lg:py-20 bg-background overflow-hidden">
+    <section id="problems" className="py-20 sm:py-32 bg-transparent overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-          <div className="lg:col-span-4">
-            <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              Los Desafíos que Enfrentamos
-            </h2>
-            <p className="mt-4 text-lg text-foreground/80">
-              En un mundo conectado, la verdadera colaboración sigue siendo un reto.
-            </p>
-            <div className="hidden lg:flex items-center gap-x-4 mt-8">
-              <CarouselPrevious className="bg-card hover:bg-card/80 border-border/50" />
-              <CarouselNext className="bg-card hover:bg-card/80 border-border/50" />
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[plugin.current]}
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+          className="w-full"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-8 items-center">
+            <div className="lg:col-span-4">
+              <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+                Los Desafíos que Enfrentamos
+              </h2>
+              <p className="mt-6 text-lg text-foreground/80">
+                En un mundo conectado, la verdadera colaboración sigue siendo un reto.
+              </p>
             </div>
-          </div>
-
-          <div className="lg:col-span-8">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              plugins={[plugin.current]}
-              onMouseEnter={plugin.current.stop}
-              onMouseLeave={plugin.current.reset}
-              className="w-full"
-            >
+            <div className="lg:col-span-8">
               <CarouselContent className="-ml-4">
                 {problems.map((problem) => (
                   <CarouselItem key={problem.title} className="pl-4 md:basis-1/2 lg:basis-1/3">
@@ -97,14 +92,13 @@ export function ProblemsSection() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-            </Carousel>
+            </div>
+            <div className="lg:col-start-5 lg:col-span-8 flex items-center justify-center lg:justify-start gap-x-2">
+                <CarouselPrevious className="static" />
+                <CarouselNext className="static" />
+            </div>
           </div>
-        </div>
-
-        <div className="flex lg:hidden items-center justify-center gap-x-4 mt-8">
-          <CarouselPrevious className="bg-card hover:bg-card/80 border-border/50" />
-          <CarouselNext className="bg-card hover:bg-card/80 border-border/50" />
-        </div>
+        </Carousel>
       </div>
     </section>
   );
