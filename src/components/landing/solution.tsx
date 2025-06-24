@@ -46,7 +46,7 @@ export function SolutionSection() {
               width={800}
               height={800}
               className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
-              data-ai-hint="community event"
+              data-ai-hint="abstract network"
             />
           </div>
             
