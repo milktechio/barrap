@@ -78,8 +78,7 @@ export function ProblemsSection() {
                   <CarouselItem key={problem.title} className="pl-4 md:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
                       <Card className="h-full bg-card/50 border border-border/20 hover:border-primary/50 transition-all duration-300 relative overflow-hidden group backdrop-blur-sm">
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(226,40,254,0.15),transparent_70%)]"></div>
                         <CardHeader className="relative z-10 h-full">
                           <div className="flex items-center gap-4">
                               {problem.icon}
