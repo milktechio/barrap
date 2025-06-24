@@ -4,16 +4,14 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { PhantomIcon } from "@/components/icons";
 import { useToast } from "@/hooks/use-toast";
-import type { PublicKey } from "@solana/web3.js";
 
-// A simplified type for the Phantom provider
 type PhantomProvider = {
-  publicKey: PublicKey | null;
+  publicKey: any | null;
   isConnected: boolean;
-  connect: (opts?: { onlyIfTrusted: boolean }) => Promise<{ publicKey: PublicKey }>;
+  connect: (opts?: { onlyIfTrusted: boolean }) => Promise<{ publicKey: any }>;
   disconnect: () => Promise<void>;
-  on: (event: "connect" | "disconnect", callback: (publicKey?: PublicKey) => void) => void;
-  // isPhantom property is used to identify the provider
+  on: (event: "connect" | "disconnect", callback: (publicKey?: any) => void) => void;
+  off: (event: "connect" | "disconnect", callback: (publicKey?: any) => void) => void;
   isPhantom: boolean;
 };
 
@@ -32,7 +30,7 @@ const getProvider = (): PhantomProvider | undefined => {
 export function ConnectWalletButton() {
   const { toast } = useToast();
   const [provider, setProvider] = useState<PhantomProvider | undefined>(undefined);
-  const [walletKey, setWalletKey] = useState<PublicKey | null>(null);
+  const [walletKey, setWalletKey] = useState<any | null>(null);
 
   // Set provider and try to connect eagerly on mount
   useEffect(() => {
@@ -50,7 +48,7 @@ export function ConnectWalletButton() {
   useEffect(() => {
     if (!provider) return;
 
-    const onConnect = (publicKey?: PublicKey) => {
+    const onConnect = (publicKey?: any) => {
       if (publicKey) {
         setWalletKey(publicKey);
         toast({
@@ -73,8 +71,8 @@ export function ConnectWalletButton() {
 
     // Clean up listeners on component unmount
     return () => {
-      provider.on("connect", onConnect);
-      provider.on("disconnect", onDisconnect);
+      provider.off("connect", onConnect);
+      provider.off("disconnect", onDisconnect);
     };
   }, [provider, toast]);
 
