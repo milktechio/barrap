@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -21,11 +21,6 @@ export function Footer() {
             <Button variant="ghost" size="icon" asChild>
               <a href="https://www.instagram.com/barra.app" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram className="h-5 w-5 text-foreground/70 hover:text-primary" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a href="#" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5 text-foreground/70 hover:text-primary" />
               </a>
             </Button>
           </div>
