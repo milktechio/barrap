@@ -1,4 +1,3 @@
-import { BarrapLogo } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { Twitter, Instagram, Linkedin } from "lucide-react";
 
@@ -8,7 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-shrink-0">
-            <BarrapLogo />
+            <img src="/images/logo_texto.png" alt="Barrap logo" className="h-10 w-auto" />
           </div>
           <p className="text-center text-sm text-foreground/60">
             &copy; {new Date().getFullYear()} Barrap. Todos los derechos reservados.
