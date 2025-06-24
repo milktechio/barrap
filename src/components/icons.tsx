@@ -11,3 +11,14 @@ export const BarrapLogo = ({ className }: { className?: string }) => (
         <span className="font-headline font-bold text-2xl text-foreground tracking-wider">Barrap</span>
     </div>
 );
+
+export const SolanaLogo = ({ className }: { className?: string }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={className}
+    >
+        <path d="M4.75 4.75v3.5h14.5v-3.5H4.75zM4.75 10.25v3.5h14.5v-3.5H4.75zm0 5.5v3.5h14.5v-3.5H4.75z"></path>
+    </svg>
+);

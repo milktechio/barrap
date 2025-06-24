@@ -1,6 +1,17 @@
-import { Rocket, Scaling, Wand2, Handshake, Users, GitBranch, CheckCircle2, CircleDot } from "lucide-react";
+import { Rocket, Scaling, Wand2, Handshake, Users, GitBranch, CheckCircle2, CircleDot, Link } from "lucide-react";
+import { SolanaLogo } from "@/components/icons";
 
 const doneItems = [
+  {
+    icon: SolanaLogo,
+    title: "Integración con Solana",
+    description: "Conexión nativa con la red de Solana para transacciones rápidas y seguras.",
+  },
+  {
+    icon: Link,
+    title: "Integración con Binance",
+    description: "Acceso a liquidez y servicios a través de la red de Binance.",
+  },
   {
     icon: Users,
     title: "200+ Primeros Usuarios",
